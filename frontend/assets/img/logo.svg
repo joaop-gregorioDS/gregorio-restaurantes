@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 300">
+  <!-- fumaça + chaminé + forno a lenha -->
+  <path d="M62 34q10-12 2-22M78 36q12-14 4-26" fill="none" stroke="#C9A25C" stroke-width="4" stroke-linecap="round"/>
+  <rect x="62" y="38" width="16" height="18" fill="#5A1B2C"/>
+  <path d="M28 118a42 42 0 0 1 84 0z" fill="none" stroke="#5A1B2C" stroke-width="7"/>
+  <path d="M28 118h84" stroke="#5A1B2C" stroke-width="7"/>
+  <path d="M40 96l8 6M56 84l4 9M84 84l-4 9M100 96l-8 6" stroke="#5A1B2C" stroke-width="4"/>
+  <path d="M70 116q-10-14 0-24q4 8 10 10q6-8 2-16q14 10 6 30z" fill="#C4502A"/>
+  <!-- ramo de oliveira -->
+  <path d="M128 78q4-30 34-44" fill="none" stroke="#6D7C3F" stroke-width="5" stroke-linecap="round"/>
+  <g fill="#6D7C3F">
+    <ellipse cx="140" cy="52" rx="12" ry="6" transform="rotate(-30 140 52)"/>
+    <ellipse cx="152" cy="66" rx="12" ry="6" transform="rotate(20 152 66)"/>
+    <ellipse cx="158" cy="40" rx="12" ry="6" transform="rotate(-15 158 40)"/>
+  </g>
+  <!-- utensílios cruzados -->
+  <g stroke="#5A1B2C" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M196 34l28 62M196 34v14M206 32v16M216 34v14"/>
+    <path d="M236 34l-26 62"/>
+    <rect x="226" y="26" width="22" height="26" rx="5" fill="#5A1B2C" stroke="none"/>
+  </g>
+  <!-- escudo -->
+  <path d="M64 128h132v72q0 62-66 84q-66-22-66-84z" fill="#F5EEDF" stroke="#5A1B2C" stroke-width="7"/>
+  <path d="M74 138h112v60q0 52-56 72q-56-20-56-72z" fill="none" stroke="#C9A25C" stroke-width="2"/>
+  <text x="130" y="216" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-weight="bold" font-size="82" fill="#5A1B2C" letter-spacing="-4">GR</text>
+  <!-- uvas à esquerda -->
+  <path d="M40 150q-8-16 6-26" fill="none" stroke="#6D7C3F" stroke-width="4"/>
+  <g fill="#5A1B2C">
+    <circle cx="34" cy="156" r="8"/><circle cx="48" cy="160" r="8"/><circle cx="26" cy="168" r="8"/>
+    <circle cx="40" cy="172" r="8"/><circle cx="33" cy="186" r="8"/>
+  </g>
+  <!-- garrafa + taça à direita -->
+  <g fill="#5A1B2C">
+    <rect x="216" y="150" width="20" height="52" rx="6"/>
+    <rect x="222" y="128" width="8" height="26"/>
+  </g>
+  <rect x="219" y="166" width="14" height="18" fill="#C4502A"/>
+  <path d="M244 156h20q0 18-10 20v18h-0z" fill="none" stroke="#5A1B2C" stroke-width="4"/>
+  <path d="M246 162h16q-1 10-8 10t-8-10z" fill="#8C2340"/>
+  <path d="M246 196h16" stroke="#5A1B2C" stroke-width="4"/>
+</svg>

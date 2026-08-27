@@ -1,0 +1,14 @@
+﻿Página,O que consome,Interação-chave
+index,destaques + categorias,"vitrine, chamada pro cardápio"
+produtos.html,produtos (filtro/busca/ordenação),grade filtrável
+produto.html,produto via ?id=,"quantidade, add. carrinho, favoritar"
+categorias.html,categorias + contagem de itens,navegação
+carrinho.html,localStorage,"alterar qtd., remover, resumo"
+checkout.html,carrinho + endereço + pagamento,"validação, gera pedido"
+login / cadastro,usuarios,"validação, sessão local"
+pedidos.html,pedidos do usuário,lista com status
+pedido-detalhe.html,pedido via ?id=,"itens, valores, timeline de status"
+perfil.html,usuario + endereços,editar dados
+favoritos.html,favoritos,"remover, mover p/ carrinho"
+contato.html,—,formulário + mapa/endereço Tatuapé
+sobre.html,—,história da casa

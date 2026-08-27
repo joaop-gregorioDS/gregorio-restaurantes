@@ -1,0 +1,4 @@
+[
+  {"id":1,"nome":"Cliente Demonstração","email":"cliente@gregorios.com.br","senha":"123456","telefone":"(11) 98888-7777",
+   "enderecos":[{"id":1,"apelido":"Casa","cep":"03307-005","rua":"Rua Tuiuti","numero":"2122","complemento":"Ap 52","bairro":"Tatuapé","cidade":"São Paulo","uf":"SP"}]}
+]

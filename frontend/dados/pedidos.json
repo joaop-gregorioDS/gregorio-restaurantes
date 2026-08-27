@@ -1,0 +1,9 @@
+[
+  {"id":1001,"usuario_id":1,"tipo_entrega":"retirada","status":"concluido","pagamento":"pix","criado_em":"2026-07-28T19:42:00",
+   "itens":[{"produto_id":1,"quantidade":2,"preco_unitario":49.90},{"produto_id":19,"quantidade":1,"preco_unitario":18.90}],
+   "subtotal":118.70,"frete":0,"total":118.70},
+  {"id":1002,"usuario_id":1,"tipo_entrega":"entrega","status":"preparo","pagamento":"cartao","criado_em":"2026-08-04T12:10:00",
+   "endereco":{"apelido":"Casa","cep":"03307-005","rua":"Rua Tuiuti","numero":"2122","complemento":"Ap 52","bairro":"Tatuapé","cidade":"São Paulo","uf":"SP"},
+   "itens":[{"produto_id":13,"quantidade":1,"preco_unitario":189.90},{"produto_id":15,"quantidade":1,"preco_unitario":26.90},{"produto_id":19,"quantidade":2,"preco_unitario":18.90}],
+   "subtotal":254.60,"frete":12,"total":266.60}
+]

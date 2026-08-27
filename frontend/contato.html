@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3F1220">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <title>Contato · Gregórios Restaurantes</title>
+  <link rel="icon" href="assets/img/logo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+  <div id="cabecalho"></div>
+
+  <main class="secao wrap">
+    <h1 class="titulo-secao">Fale Conosco</h1><div class="divisor"></div>
+
+    <div class="sobre-grade sobre-grade--contato">
+      <div>
+        <div class="moldura" style="margin-bottom:1.4rem">
+          <i class="canto tl"></i><i class="canto tr"></i><i class="canto bl"></i><i class="canto br"></i>
+          <h3 style="margin-bottom:.6rem">📍 Nossa Casa</h3>
+          <p>Rua Tuiuti, 2122 – Tatuapé<br>São Paulo/SP · CEP 03307-005</p>
+          <p style="margin-top:.6rem">📞 Tel: <a href="tel:+551122254122" style="color:var(--vinho)">(11) 2225-4122</a><br>💬 WhatsApp: <a href="https://wa.me/5511972254122" target="_blank" rel="noopener" style="color:var(--vinho)">(11) 97225-4122</a><br>✉️ <a href="mailto:contato@gregoriosrestaurantes.com.br" style="color:var(--vinho)">contato@gregoriosrestaurantes.com.br</a></p>
+          <h3 style="margin:1rem 0 .4rem">🕐 Horários</h3>
+          <ul style="list-style:none;font-size:.9rem"><li>Ter–Qui · 11h–22h</li><li>Sex–Sáb · 11h–23h</li><li>Dom · 11h–21h</li></ul>
+        </div>
+        <div class="mapa" data-reveal>
+          <div class="mapa-pino"><b>📍</b>Rua Tuiuti, 2122 · Tatuapé<br><small style="color:var(--suave)">a 900 m do Metrô Penha</small></div>
+        </div>
+      </div>
+
+      <form class="moldura" id="form-contato" novalidate>
+        <i class="canto tl"></i><i class="canto tr"></i><i class="canto bl"></i><i class="canto br"></i>
+        <h3 style="margin-bottom:1rem">Envie uma mensagem</h3>
+        <div class="campo"><label for="c-nome">Nome</label><input id="c-nome" required placeholder="Seu nome"></div>
+        <div class="campo"><label for="c-email">E-mail</label><input id="c-email" type="email" required placeholder="voce@email.com"></div>
+        <div class="campo"><label for="c-assunto">Assunto</label>
+          <select id="c-assunto"><option>Reservas e eventos</option><option>Dúvida sobre pedido</option><option>Elogio ou sugestão</option><option>Trabalhe conosco</option></select></div>
+        <div class="campo"><label for="c-msg">Mensagem</label><textarea id="c-msg" rows="5" required placeholder="Escreva sua mensagem…"></textarea></div>
+        <button class="btn" type="submit">Enviar Mensagem</button>
+      </form>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+  <script src="js/api.js"></script><script src="js/estado.js"></script><script src="js/ui.js"></script>
+  <script src="js/paginas/contato.js"></script>
+</body>
+</html>
