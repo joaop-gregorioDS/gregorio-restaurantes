@@ -16,7 +16,14 @@ O projeto adota o **MERN Stack** moderno, focando em aprofundar conhecimentos no
 - **Front-end:** HTML5, CSS3 Grid/Flexbox, Vanilla JavaScript (Manipulação de DOM, Fetch API, LocalStorage).
 - **Back-end:** Node.js, Express, Middlewares de Autenticação.
 - **Banco de Dados:** MongoDB Atlas & Mongoose (ODM).
-- **Infraestrutura/Deploy:** Netlify & Vercel (Front-end), Render.com (Back-end/API REST).
+- **Infraestrutura/Deploy:** Netlify & Vercel (Front-end em Deploy Multi-plataforma para Alta Disponibilidade), Render.com (Back-end/API REST).
+
+## 🌍 Arquitetura Distribuída e Alta Disponibilidade
+
+Este projeto foi desenhado para simular um ambiente corporativo real de **Alta Disponibilidade (High Availability)** utilizando uma estratégia de deploy multi-plataforma:
+
+1. **Back-end Centralizado (Render.com):** A API e a lógica de negócios rodam de forma centralizada e independente em contêineres na nuvem, conectando-se ao MongoDB Atlas.
+2. **Front-end Multi-CDN (Vercel & Netlify):** O código cliente (Vanilla JS) foi hospedado simultaneamente em duas das maiores CDNs (Content Delivery Networks) do mundo. Isso garante que, se uma infraestrutura sofrer instabilidade, a outra assume imediatamente o tráfego do restaurante, sem interrupção para o cliente.
 
 ## 📚 Documentação Adicional
 
