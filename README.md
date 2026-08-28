@@ -5,7 +5,9 @@
 [![API Render](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render)](https://gregorio-restaurantes-api.onrender.com)
 [![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/cloud/atlas)
 
-> **Acesse o projeto rodando ao vivo:** [https://gregorio-restaurantes.netlify.app/](https://gregorio-restaurantes.netlify.app/)
+> **Acesse o projeto rodando ao vivo (Deploy Redundante):** 
+> 🔗 **Vercel:** [https://gregorio-restaurantes.vercel.app](https://gregorio-restaurantes.vercel.app/)
+> 🔗 **Netlify:** [https://gregorio-restaurantes.netlify.app](https://gregorio-restaurantes.netlify.app/)
 
 Projeto de portfólio Full-Stack simulando um e-commerce/delivery de restaurante, com separação completa entre Front-end e Back-end.
 
