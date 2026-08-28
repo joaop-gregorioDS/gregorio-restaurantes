@@ -7,11 +7,7 @@ const Ui = (() => {
     recebido:'Recebido', preparo:'Em preparo', pronto:'Pronto', entrega:'Em entrega', concluido:'Concluído', cancelado:'Cancelado',
     pendente:'Recebido', preparando:'Em preparo', saiu_entrega:'Em entrega', entregue:'Concluído'
   };
-  const EMPRESA = { 
-    nome:'Gregórios Restaurantes', rua:'Rua Tuiuti, 2122', bairro:'Tatuapé', cidade:'São Paulo/SP', cep:'CEP 03307-005', 
-    tel:'(11) 98388-1984', whats:'(11) 98388-1984', email:'joaop.gregorio@outlook.com', 
-    frete:12, tempoEntrega:'45–60 min', tempoRetirada:'~30 min' 
-  };
+  const EMPRESA = { nome:'Gregórios Restaurantes', rua:'Rua Tuiuti, 2122', bairro:'Tatuapé', cidade:'São Paulo/SP', cep:'CEP 03307-005', tel:'(11) 98388-1984', whats:'(11) 98388-1984', email:'joaop.gregorio@outlook.com', frete:12, tempoEntrega:'45–60 min', tempoRetirada:'~30 min' };
 
   const ico = {
     cesta:'<svg viewBox="0 0 24 24"><path d="M6 7h12l1.5 13h-15L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>',
@@ -66,7 +62,7 @@ const Ui = (() => {
     <footer class="rodape">
       <div class="wrap rodape-grade">
         <div><h4>Gregórios</h4><p style="font-size:.88rem;opacity:.9">Pizzaria, Cozinha Mediterrânea &amp; Grelhados.<br><em style="font-family:var(--fi)">Tradição Ítalo-Brasileira | Vinhos Selecionados</em></p></div>
-        <div><h4>Contato</h4><ul><li>${EMPRESA.rua} - ${EMPRESA.bairro}</li><li>${EMPRESA.cidade} - ${EMPRESA.cep}</li><li>Tel: <a href="tel:+5511983881984">${EMPRESA.tel}</a></li><li>WhatsApp: <a href="https://wa.me/5511983881984" target="_blank" rel="noopener">${EMPRESA.whats}</a></li><li><a href="mailto:${EMPRESA.email}">${EMPRESA.email}</a></li></ul></div>
+        <div><h4>Contato</h4><ul><li>${EMPRESA.rua} - ${EMPRESA.bairro}</li><li>${EMPRESA.cidade} – ${EMPRESA.cep}</li><li>Tel: <a href="tel:+5511983881984">${EMPRESA.tel}</a></li><li>WhatsApp: <a href="https://wa.me/5511983881984" target="_blank" rel="noopener">${EMPRESA.whats}</a></li><li><a href="mailto:${EMPRESA.email}">${EMPRESA.email}</a></li></ul></div>
         <div><h4>Tech Stack</h4><ul><li>Node.js & Express</li><li>MongoDB Atlas</li><li>JavaScript Vanilla</li><li>HTML5 & CSS3</li><li style="margin-top:0.5rem"><a href="https://github.com/joaop-gregorioDS/gregorio-restaurantes" target="_blank" rel="noopener">🔗 Repositório GitHub</a></li></ul></div>
         <div><h4>Navegue</h4><ul>
           <li><a href="produtos.html">Cardápio</a></li><li><a href="carrinho.html">Minha cesta</a></li>
