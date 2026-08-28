@@ -65,4 +65,5 @@ Abra a pasta `frontend/` no VS Code, instale a extens√£o **Live Server** e cliqu
 > **E-mail:** `cliente@gregorios.com.br` | **Senha:** `senha`
 
 ---
-*Desenvolvido por Jo√£o P. Greg√≥rio.*
+*Desenvolvido por Jo„o P. GregÛrio* | ?? [joaop.gregorio@outlook.com](mailto:joaop.gregorio@outlook.com) | ?? [+55 11 98388-1984](https://wa.me/5511983881984)
+
