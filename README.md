@@ -1,46 +1,59 @@
 # 🍷 Gregórios Restaurantes — Full-Stack MERN
 
-Projeto de aprendizado Full-Stack abrangendo Front-end (Vanilla JS) e Back-end (Node.js/Express + MongoDB Atlas). 
-Rua Tuiuti, 2122 – Tatuapé · São Paulo/SP · CEP 03307-005
+[![Deploy Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://gregorio-restaurantes.vercel.app/)
+[![Deploy Netlify](https://img.shields.io/badge/Deploy-Netlify-00C7B7?style=for-the-badge&logo=netlify)](https://gregorio-restaurantes.netlify.app/)
+[![API Render](https://img.shields.io/badge/API-Render-46E3B7?style=for-the-badge&logo=render)](https://gregorio-restaurantes-api.onrender.com)
+[![MongoDB Atlas](https://img.shields.io/badge/Database-MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/cloud/atlas)
 
-## 📚 Documentação completa
+> **Acesse o projeto rodando ao vivo:** [https://gregorio-restaurantes.netlify.app/](https://gregorio-restaurantes.netlify.app/)
 
-| Documento | Conteúdo |
-| :--- | :--- |
-| [DOCUMENTACAO.md](./DOCUMENTACAO.md) | Guia do projeto: páginas, funcionalidades, fluxo de teste, como rodar |
-| [ARQUITETURA.md](./ARQUITETURA.md) | Stack, camadas, contrato da API, modelo de dados Mongoose, design system |
+Projeto de portfólio Full-Stack simulando um e-commerce/delivery de restaurante, com separação completa entre Front-end e Back-end.
 
-## ▶️ Como rodar localmente
+## 🚀 Tecnologias e Arquitetura
 
-Este projeto utiliza uma arquitetura separada entre a API (Back-end) e o Site (Front-end).
+O projeto adota o **MERN Stack** moderno, focando em aprofundar conhecimentos nos fundamentos da Web (Vanilla JS) e na criação de APIs robustas.
 
-### 1. Back-end (API Node.js)
-Abra um terminal na pasta `backend/`:
+- **Front-end:** HTML5, CSS3 Grid/Flexbox, Vanilla JavaScript (Manipulação de DOM, Fetch API, LocalStorage).
+- **Back-end:** Node.js, Express, Middlewares de Autenticação.
+- **Banco de Dados:** MongoDB Atlas & Mongoose (ODM).
+- **Infraestrutura/Deploy:** Netlify & Vercel (Front-end), Render.com (Back-end/API REST).
+
+## 📚 Documentação Adicional
+
+Para se aprofundar em como o sistema foi estruturado e testar as rotas, acesse os guias abaixo:
+
+- [📄 DOCUMENTACAO.md](./DOCUMENTACAO.md) — Guia de funcionalidades, fluxos do usuário e testes.
+- [🏗️ ARQUITETURA.md](./ARQUITETURA.md) — Contratos, modelagem de dados e decisões de infraestrutura.
+
+## ▶️ Como rodar o projeto localmente
+
+### 1. Configurar a API (Back-end)
+Abra o terminal na pasta raiz e entre no diretório do servidor:
 ```bash
 cd backend
 npm install
+```
+
+Crie um arquivo `.env` na pasta `backend/` e adicione a sua URI do MongoDB Atlas e o secret do JWT:
+```env
+PORT=5000
+MONGODB_URI=mongodb+srv://<usuario>:<senha>@cluster.mongodb.net/meu_banco
+JWT_SECRET=super_secret_jwt_key
+```
+
+Inicie o servidor:
+```bash
 npm start
 ```
 *A API ficará disponível em http://localhost:5000*
 
-### 2. Front-end (Vanilla JS)
-Abra a pasta `frontend/` e sirva os arquivos estáticos.
-* **VS Code:** Use a extensão **Live Server** e clique em *Go Live*.
-* **Node:** `npx serve frontend`
-*A aplicação vai rodar em http://127.0.0.1:5500*
+### 2. Rodar a Interface (Front-end)
+O Front-end consumirá automaticamente a API hospedada em produção ou o `localhost` caso você esteja desenvolvendo.
 
-**Login demo:** `cliente@gregorios.com.br` · senha `senha`
+Abra a pasta `frontend/` no VS Code, instale a extensão **Live Server** e clique em *Go Live*. (Alternativamente, use `npx serve frontend`).
 
-## ☁️ Conexão com MongoDB Atlas
+> **Login para testar o checkout:**
+> **E-mail:** `cliente@gregorios.com.br` | **Senha:** `senha`
 
-O banco de dados do projeto está hospedado na nuvem (MongoDB Atlas). Para conectar a API ao banco, certifique-se de configurar a variável de ambiente `MONGODB_URI` no arquivo `.env` localizado na pasta `backend/`.
-
-## 🧱 Estrutura de Diretórios
-
-- **`frontend/`**: Aplicação SPA em HTML/CSS/JS puro (Vanilla).
-  - `css/`: Design system e responsividade.
-  - `js/`: Camada de dados (`api.js`), estado (`estado.js`), componentes (`ui.js`) e controladores de página.
-- **`backend/`**: API RESTful em Node.js com Express e Mongoose.
-  - `models/`: Schemas do MongoDB (User, Product, Order, Category).
-  - `routes/`: Endpoints da API.
-  - `middleware/`: Autenticação e validação (JWT/Tokens).
+---
+*Desenvolvido por João P. Gregório.*
