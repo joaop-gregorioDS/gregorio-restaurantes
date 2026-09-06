@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#3F1220">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <title>Criar Conta · Gregórios Restaurantes</title>
+  <link rel="icon" href="assets/img/logo.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=Cormorant+Garamond:ital,wght@1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/paginas.css">
+</head>
+<body>
+  <div id="cabecalho"></div>
+  <main class="secao wrap">
+    <h1 class="titulo-secao">Criar Conta</h1><div class="divisor"></div>
+
+    <form class="moldura cartao-form" id="form-cad" novalidate style="max-width:520px">
+      <i class="canto tl"></i><i class="canto tr"></i><i class="canto bl"></i><i class="canto br"></i>
+      <p class="tagline" style="text-align:center;margin-bottom:1.3rem">Reserve sua mesa na história — é rapidinho.</p>
+
+      <div class="campo"><label for="nome">Nome completo</label><input id="nome" required placeholder="Seu nome" autofocus></div>
+      <div class="campo"><label for="email">E-mail</label><input id="email" type="email" required placeholder="voce@email.com"></div>
+      <div class="campo"><label for="tel">Telefone</label><input id="tel" placeholder="(11) 99999-9999"></div>
+
+      <div class="linha-2">
+        <div class="campo"><label for="senha">Senha</label><input id="senha" type="password" required placeholder="Mínimo 6 caracteres" minlength="6"></div>
+        <div class="campo"><label for="conf">Confirmar senha</label><input id="conf" type="password" required></div>
+      </div>
+
+      <div id="erro" hidden style="background:rgba(90,27,44,.08);color:var(--vinho);border-left:4px solid var(--vinho);padding:.7rem 1rem;border-radius:0 8px 8px 0;font-size:.85rem;margin-bottom:.8rem"></div>
+
+      <button class="btn" type="submit" style="width:100%;justify-content:center">Criar Conta</button>
+
+      <p style="text-align:center;margin-top:1.3rem;font-size:.88rem">
+        Já tem conta? <a href="login.html" style="color:var(--vinho);font-weight:700">Entrar</a>
+      </p>
+    </form>
+  </main>
+  <div id="rodape"></div>
+  <script src="js/api.js"></script><script src="js/estado.js"></script><script src="js/ui.js"></script>
+  <script src="js/paginas/cadastro.js"></script>
+</body>
+</html>

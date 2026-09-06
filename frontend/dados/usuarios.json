@@ -1,0 +1,4 @@
+[
+  {"id":1,"nome":"Cliente Demonstração","email":"cliente@gregorios.com.br","senha":"123456","telefone":"(11) 98888-7777",
+   "enderecos":[{"id":1,"apelido":"Casa","cep":"03310-000","rua":"Rua dos Italianos","numero":"187","complemento":"","bairro":"Tatuapé","cidade":"São Paulo","uf":"SP"}]}
+]

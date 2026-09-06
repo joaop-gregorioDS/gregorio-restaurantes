@@ -1,0 +1,88 @@
+const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+const fs = require('fs');
+const path = require('path');
+
+dotenv.config();
+
+const bcrypt = require('bcryptjs');
+const Category = require('./models/Category');
+const Product = require('./models/Product');
+const User = require('./models/User');
+
+const importData = async () => {
+  try {
+    if (!process.env.MONGODB_URI) {
+      throw new Error('MONGODB_URI is required');
+    }
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('MongoDB Conectado para Importação...');
+
+    // Limpar o banco de dados antes
+    await Category.deleteMany();
+    await Product.deleteMany();
+    console.log('Coleções antigas limpas.');
+
+    // Ler arquivos JSON
+    const categoriasPath = path.join(__dirname, '../frontend/dados/categorias.json');
+    const produtosPath = path.join(__dirname, '../frontend/dados/produtos.json');
+
+    const categoriasData = JSON.parse(fs.readFileSync(categoriasPath, 'utf-8'));
+    const produtosData = JSON.parse(fs.readFileSync(produtosPath, 'utf-8'));
+
+    // Inserir categorias
+    // A estrutura JSON original é: { id, nome, slug, icone }
+    // Vamos salvar a correlação do ID antigo com o novo ObjectId
+    const categoryIdMap = {};
+
+    for (const cat of categoriasData) {
+      const novaCategoria = await Category.create({
+        nome: cat.nome,
+        slug: cat.slug,
+        icone: cat.icone
+      });
+      categoryIdMap[cat.id] = novaCategoria._id;
+    }
+    console.log('Categorias importadas com sucesso!');
+
+    // Inserir produtos
+    // A estrutura JSON é: { id, categoria_id, nome, desc, preco, emoji, tags, harmoniza, destaque, disponivel }
+    const produtosMongoose = produtosData.map(prod => {
+      return {
+        nome: prod.nome,
+        desc: prod.desc,
+        preco: prod.preco,
+        emoji: prod.emoji,
+        tags: prod.tags || [],
+        harmoniza: prod.harmoniza,
+        destaque: prod.destaque || false,
+        disponivel: prod.disponivel !== false,
+        categoria: categoryIdMap[prod.categoria_id] // vinculando com o novo _id do MongoDB
+      };
+    });
+
+    await Product.insertMany(produtosMongoose);
+    console.log('Produtos importados com sucesso!');
+
+    const demoEmail = 'cliente@gregorios.com.br';
+    const demoHash = await bcrypt.hash('123456', 10);
+    await User.findOneAndUpdate(
+      { email: demoEmail },
+      {
+        nome: 'Cliente Demonstração',
+        email: demoEmail,
+        senha: demoHash,
+        telefone: '(11) 98888-7777',
+      },
+      { upsert: true, new: true }
+    );
+    console.log('Conta demo: cliente@gregorios.com.br / 123456');
+
+    process.exit();
+  } catch (error) {
+    console.error('Erro na importação: ', error);
+    process.exit(1);
+  }
+};
+
+importData();

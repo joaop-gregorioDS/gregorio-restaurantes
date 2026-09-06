@@ -1,0 +1,8 @@
+[
+  {"id":1,"slug":"pizzas","nome":"Pizzas no Forno a Lenha","descricao":"Massa de fermentação lenta de 48h, assada no fogo como manda a tradição.","icone":"🍕","ordem":1},
+  {"id":2,"slug":"mediterranea","nome":"Cozinha Mediterrânea","descricao":"Azeite, ervas e o mar — receitas de família com sotaque italiano.","icone":"🫒","ordem":2},
+  {"id":3,"slug":"grelhados","nome":"Grelhados & Brasas","descricao":"Cortes selecionados na brasa de carvão, com o ponto que você pedir.","icone":"🔥","ordem":3},
+  {"id":4,"slug":"entradas","nome":"Entradas & Antepastos","descricao":"Para abrir o apetite enquanto o vinho respira.","icone":"🥖","ordem":4},
+  {"id":5,"slug":"sobremesas","nome":"Sobremesas","descricao":"Doces clássicos para fechar com chave de ouro.","icone":"🍰","ordem":5},
+  {"id":6,"slug":"adega","nome":"Adega & Bebidas","descricao":"Rótulos selecionados pelo nosso sommelier, taças e bebidas da casa.","icone":"🍷","ordem":6}
+]

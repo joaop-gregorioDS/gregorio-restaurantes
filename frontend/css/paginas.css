@@ -1,0 +1,113 @@
+/* ═══ GREGÓRIOS · estilos por página · vidro ═══ */
+
+/* ── catálogo ── */
+.toolbar{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin:1.6rem 0 1.1rem}
+.busca{flex:1;min-width:230px;position:relative}
+.busca::before{content:"🔍";position:absolute;left:.85rem;top:50%;transform:translateY(-50%);font-size:.85rem;opacity:.7;pointer-events:none}
+.busca input{
+  width:100%;background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.65);border-radius:999px;
+  padding:.85rem 1rem .85rem 2.5rem;font:inherit;color:var(--tinta);font-size:16px;min-height:44px;
+  box-shadow:inset 0 1px 3px rgba(63,18,32,.06),inset 0 1px 0 rgba(255,255,255,.6)}
+.busca input:focus{border-color:rgba(201,162,92,.8);background:rgba(255,255,255,.82);box-shadow:0 0 0 3px rgba(201,162,92,.22);outline:none}
+.select-ordem{
+  background:rgba(255,255,255,.62);border:1px solid rgba(255,255,255,.65);border-radius:999px;padding:.75rem 1.1rem;
+  font:inherit;font-size:16px;color:var(--tinta);cursor:pointer;min-height:44px;box-shadow:inset 0 1px 0 rgba(255,255,255,.6)}
+.chips{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;contain:inline-size}
+@media(max-width:600px){
+  /* carrossel de chips: rola dentro do próprio container, sem vazar a página */
+  .chips{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;gap:.6rem;padding-bottom:.6rem}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{white-space:nowrap;flex:0 0 auto}
+}
+.chip{
+  border:1px solid rgba(90,27,44,.28);background:rgba(255,255,255,.42);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border-radius:999px;padding:.55rem 1rem;font-size:.78rem;letter-spacing:.05em;cursor:pointer;transition:.2s;color:var(--tinta);
+  font-family:var(--fc);min-height:38px;display:inline-flex;align-items:center;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+.chip:hover{border-color:rgba(201,162,92,.7);transform:translateY(-2px)}
+.chip.ativo{
+  background:linear-gradient(180deg,rgba(122,36,56,.94),rgba(90,27,44,.94));color:var(--creme);border-color:rgba(255,255,255,.25);
+  box-shadow:0 6px 16px rgba(63,18,32,.35),inset 0 1px 0 rgba(255,255,255,.3)}
+.contagem{font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--suave)}
+.migalhas{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--suave);margin-bottom:1.6rem}
+.migalhas a{color:var(--vinho);text-decoration:none;display:inline-block;padding:.35rem .15rem}
+.migalhas a:hover{text-decoration:underline}
+.produto-grade{display:grid;grid-template-columns:1fr 1.15fr;gap:2.4rem;align-items:start}
+.produto-arte{height:360px;font-size:7.5rem;border-radius:10px;border:1px solid rgba(255,255,255,.45);box-shadow:inset 0 1px 0 rgba(255,255,255,.4)}
+.produto-arte span{filter:drop-shadow(0 12px 18px rgba(63,18,32,.32))}
+.produto-info h1{font-size:clamp(1.5rem,3.4vw,2.3rem);letter-spacing:.06em;text-transform:uppercase;margin:.5rem 0 .3rem}
+.produto-preco{font-family:var(--fd);font-size:1.9rem;color:var(--vinho);margin:.9rem 0 1.1rem}
+.compra-linha{display:flex;gap:.9rem;align-items:center;flex-wrap:wrap}
+.compra-linha .qtd{padding:.45rem .9rem}
+.compra-linha .qtd b{min-width:1.4rem;text-align:center;font-size:1rem}
+.harmoniza{
+  background:rgba(201,162,92,.14);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);
+  border-left:3px solid var(--dourado);padding:.85rem 1.1rem;border-radius:0 12px 12px 0;
+  font-family:var(--fi);font-style:italic;font-size:1.05rem;margin:1rem 0}
+.info-entrega{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:.82rem;color:var(--suave);margin-top:1.3rem;border-top:1px dashed rgba(90,27,44,.3);padding-top:1rem}
+.esgotado{background:rgba(234,224,204,.7);color:var(--suave);border-radius:12px;padding:.7rem 1rem;display:inline-block;font-family:var(--fd);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+.grade-cats.grande { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; }
+.grade-cats.grande .card-cat{padding:2.1rem 1.3rem}
+.cat-desc{font-size:.83rem;color:var(--suave);margin:.5rem 0 .7rem;min-height:2.6em}
+
+/* ── compra: carrinho / checkout ── */
+.compra-grade{display:grid;grid-template-columns:1.55fr 1fr;gap:2rem;align-items:start}
+.coluna-sticky{position:sticky;top:96px}
+.resumo .btn{width:100%;margin-top:.6rem;justify-content:center}
+.resumo-itens{max-height:250px;overflow:auto;display:grid;gap:.45rem;padding-right:.3rem}
+.taxa-gratis{color:var(--oliva-escuro);font-weight:700}
+.limpar-link{background:none;border:none;color:var(--suave);font-size:.75rem;text-decoration:underline;cursor:pointer;margin-top:.3rem}
+
+/* ── pedidos ── */
+.pedido-card{
+  display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;
+  background:var(--glass-light);backdrop-filter:blur(var(--blur)) saturate(130%);-webkit-backdrop-filter:blur(var(--blur)) saturate(130%);
+  border:1px solid var(--glass-border);border-radius:var(--raio);padding:1rem 1.2rem;margin-bottom:.9rem;transition:.25s;
+  text-decoration:none;color:var(--tinta);box-shadow:0 6px 18px rgba(63,18,32,.10),var(--specular)}
+.pedido-card:hover{box-shadow:0 20px 40px rgba(63,18,32,.22),var(--specular);transform:translateY(-3px);border-color:rgba(201,162,92,.6)}
+.pedido-card h3{font-size:.98rem;letter-spacing:.06em}
+.pedido-meta{font-size:.78rem;color:var(--suave)}
+
+/* ── detalhe do pedido ── */
+.detalhe-grade{display:grid;grid-template-columns:1.5fr 1fr;gap:2rem;align-items:start;margin-top:1.2rem}
+.item-linha{
+  display:flex;gap:.9rem;align-items:center;background:var(--glass-light);backdrop-filter:blur(var(--blur)) saturate(130%);-webkit-backdrop-filter:blur(var(--blur)) saturate(130%);
+  border:1px solid var(--glass-border);border-radius:var(--raio);padding:.7rem .9rem;margin-bottom:.7rem;box-shadow:0 4px 14px rgba(63,18,32,.08),var(--specular)}
+.item-linha .emoji{font-size:1.9rem}
+
+@media(max-width:900px){
+  .compra-grade,.detalhe-grade{grid-template-columns:1fr;gap:1.5rem}
+  .coluna-sticky{position:static}
+  .produto-grade{grid-template-columns:1fr;gap:1.6rem}
+  .produto-arte{height:260px;font-size:5.5rem}
+}
+@media(max-width:600px){
+  .toolbar{flex-direction:column;align-items:stretch;gap:.7rem;margin:1.2rem 0 .9rem}
+  .busca{min-width:0;width:100%}
+  .select-ordem{width:100%}
+  .produto-grade{gap:1.2rem}
+  .produto-arte{height:220px;font-size:4.5rem}
+  .produto-info h1{font-size:1.45rem}
+  .produto-preco{font-size:1.6rem}
+  .compra-linha{flex-direction:column;align-items:stretch}
+  .compra-linha .btn{width:100%}
+  .compra-linha .qtd{justify-content:center}
+  .carrinho-item{flex-wrap:wrap;gap:.8rem;padding:.9rem}
+  .carrinho-item .emoji{width:56px;height:56px;font-size:1.9rem}
+  .carrinho-item .qtd{order:3}
+  .pedido-card{flex-direction:column;align-items:flex-start}
+  .item-linha{flex-wrap:wrap}
+  .migalhas{font-size:.66rem;line-height:1.6}
+  .harmoniza{font-size:.95rem;padding:.75rem 1rem}
+  .info-entrega{flex-direction:column;gap:.5rem}
+  .resumo{margin-top:.5rem}
+  .cartao-form{margin:1.2rem auto;padding:1.2rem 1rem}
+  .cartao-form .moldura{padding:1.2rem 1rem}
+}
+@media(max-width:380px){
+  .produto-arte{height:200px;font-size:4rem}
+  .carrinho-item{padding:.75rem}
+}
+
+
+@media(max-width:900px){.grade-cats.grande{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grade-cats.grande{grid-template-columns:1fr}}
