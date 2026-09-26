@@ -6,6 +6,8 @@ Pagamento e entrega são simulados. O backend persiste pedidos e atualiza o esto
 
 [Live](https://gregorio-restaurantes.vercel.app)
 
+**Hospedagem:** frontend na Vercel, API no Render e banco de dados no MongoDB Atlas.
+
 ---
 
 ## Demonstração
