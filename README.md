@@ -2,7 +2,7 @@
 
 Delivery de pizzaria e cozinha ítalo-brasileira de **demonstração**. O avaliador monta o pedido, entra com a conta demo, finaliza o checkout e acompanha o status.
 
-Pagamento, entrega e estoque são simulados. Não há cobrança real.
+Pagamento e entrega são simulados. O backend persiste pedidos e atualiza o estoque do catálogo de demonstração; não há cobrança nem operação logística reais.
 
 [Live](https://gregorio-restaurantes.vercel.app)
 
@@ -20,7 +20,7 @@ Pagamento, entrega e estoque são simulados. Não há cobrança real.
 
 **Caminho do avaliador:** cardápio → cesta → entrar → checkout (entrega ou retirada) → pedidos.
 
-Rotas de conta e pedido exigem JWT. Sem token, o checkout e o histórico respondem **401**.
+O histórico de pedidos exige JWT. No código atual, a criação do pedido aceita sessão opcional (`optionalAuth`), portanto a API também pode gravar um pedido sem login quando os dados do cliente são enviados.
 
 ---
 
